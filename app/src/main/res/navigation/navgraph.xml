@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/patOrDoc">
+
+    <fragment
+        android:id="@+id/patOrDoc"
+        android:name="com.example.docs.PatOrDoc"
+        android:label="fragment_pat_or_doc"
+        tools:layout="@layout/fragment_pat_or_doc" >
+        <action
+            android:id="@+id/action_patOrDoc_to_docLogin"
+            app:destination="@id/docLogin" />
+        <action
+            android:id="@+id/action_patOrDoc_to_patientDoc"
+            app:destination="@id/patientDoc" />
+    </fragment>
+    <fragment
+        android:id="@+id/docLogin"
+        android:name="com.example.docs.DocLogin"
+        android:label="fragment_doc_login"
+        tools:layout="@layout/fragment_doc_login" >
+        <action
+            android:id="@+id/action_docLogin_to_docView"
+            app:destination="@id/docView" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientDoc"
+        android:name="com.example.docs.PatientDoc"
+        android:label="fragment_patient_doc"
+        tools:layout="@layout/fragment_patient_doc" >
+        <action
+            android:id="@+id/action_patientDoc_to_patentView"
+            app:destination="@id/patentView" />
+    </fragment>
+    <fragment
+        android:id="@+id/patentView"
+        android:name="com.example.docs.PatentView"
+        android:label="fragment_patent_view"
+        tools:layout="@layout/fragment_patent_view" >
+        <action
+            android:id="@+id/action_patentView_to_neuroForm"
+            app:destination="@id/neuroForm" />
+    </fragment>
+    <fragment
+        android:id="@+id/docView"
+        android:name="com.example.docs.DocView"
+        android:label="fragment_doc_view"
+        tools:layout="@layout/fragment_doc_view" >
+        <action
+            android:id="@+id/action_docView_to_myProfile2"
+            app:destination="@id/myProfile2" />
+    </fragment>
+    <fragment
+        android:id="@+id/myProfile2"
+        android:name="com.example.docs.MyProfile"
+        android:label="fragment_my_profile"
+        tools:layout="@layout/fragment_my_profile" />
+    <fragment
+        android:id="@+id/neuroForm"
+        android:name="com.example.docs.NeuroForm"
+        android:label="fragment_neuro_form"
+        tools:layout="@layout/fragment_neuro_form" />
+</navigation>
